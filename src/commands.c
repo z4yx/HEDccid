@@ -1238,6 +1238,7 @@ again_status:
 		return IFD_COMMUNICATION_ERROR;
 	}
 
+#if 0
 	if ((buffer[STATUS_OFFSET] & CCID_COMMAND_FAILED)
 		/* card absent or mute is not an communication error */
 		&& (buffer[ERROR_OFFSET] != 0xFE))
@@ -1245,6 +1246,7 @@ again_status:
 		return_value = IFD_COMMUNICATION_ERROR;
 		ccid_error(PCSC_LOG_ERROR, buffer[ERROR_OFFSET], __FILE__, __LINE__, __FUNCTION__);    /* bError */
 	}
+#endif
 
 	return return_value;
 } /* CmdGetSlotStatus */

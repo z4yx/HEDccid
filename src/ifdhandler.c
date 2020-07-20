@@ -1217,6 +1217,7 @@ EXTERNAL RESPONSECODE IFDHPowerICC(DWORD Lun, DWORD Action,
 			 */
 			ccid_descriptor->readTimeout = 60*1000;
 
+			CmdPowerOff(reader_index);
 			nlength = sizeof(pcbuffer);
 			return_value = CmdPowerOn(reader_index, &nlength, pcbuffer,
 				PowerOnVoltage);
@@ -1900,6 +1901,8 @@ EXTERNAL RESPONSECODE IFDHICCPresence(DWORD Lun)
 	if (return_value != IFD_SUCCESS)
 		return return_value;
 
+	return_value = IFD_ICC_PRESENT;
+#if 0
 	return_value = IFD_COMMUNICATION_ERROR;
 	switch (pcbuffer[7] & CCID_ICC_STATUS_MASK)	/* bStatus */
 	{
@@ -1934,6 +1937,7 @@ EXTERNAL RESPONSECODE IFDHICCPresence(DWORD Lun)
 			return_value = IFD_ICC_NOT_PRESENT;
 			break;
 	}
+#endif
 
 #if 0
 	/* SCR331-DI contactless reader */
