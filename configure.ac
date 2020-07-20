@@ -169,10 +169,10 @@ fi
 # --enable-bundle=NAME
 AC_ARG_ENABLE(bundle,
 	AS_HELP_STRING([--enable-bundle=NAME],[bundle directory name
-	(default ifd-ccid.bundle)]),
+	(default ifd-hedccid.bundle)]),
 	[bundle="${enableval}"], [bundle=false])
 if test "${bundle}" = false ; then
-	bundle="ifd-ccid.bundle"
+	bundle="ifd-hedccid.bundle"
 fi
 AC_DEFINE_UNQUOTED(BUNDLE, "$bundle", [bundle directory name])
 

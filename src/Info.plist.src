@@ -35,7 +35,7 @@
 	<string>0x00000001</string>
 
 	<key>ifdLogLevel</key>
-	<string>0x0003</string>
+	<string>0x0007</string>
 
 	<!-- Possible values for ifdLogLevel
 	1: CRITICAL  important error messages
@@ -97,7 +97,7 @@
 	<string>Ludovic Rousseau (ludovic.rousseau@free.fr)</string>
 
 	<key>ifdProductString</key>
-	<string>Generic CCID driver</string>
+	<string>HED CCID driver</string>
 
 	<key>ifdVendorID</key>
 	<array>

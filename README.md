@@ -52,7 +52,7 @@ default) then the CCID driver will also send its debug to syslog.
 
 You can change the debug level using the `Info.plist` configuration file.
 The `Info.plist` file is installed, by default, in
-`/usr/local/pcsc/drivers/ifd-ccid.bundle/Contents/Info.plist`
+`/usr/local/pcsc/drivers/ifd-hedccid.bundle/Contents/Info.plist`
 or set the environment variable `LIBCCID_ifdLogLevel`.
 
 The debug level is set in the `ifdLogLevel` field. It is a binary OR
@@ -78,7 +78,7 @@ Voltage selection
 
 You can change the voltage level using the `Info.plist` configuration
 file.  The `Info.plist` is installed, by default, in
-`/usr/local/pcsc/drivers/ifd-ccid.bundle/Contents/Info.plist`
+`/usr/local/pcsc/drivers/ifd-hedccid.bundle/Contents/Info.plist`
 
 The voltage level is set in the `ifdDriverOptions` field. It is a binary OR
 combination of 4 different levels.
